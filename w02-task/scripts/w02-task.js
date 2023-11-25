@@ -6,9 +6,7 @@
 
 let fullName = 'Cody Bishop';
 
-
 let currentYear = new Date().getFullYear();
-
 
 let profilePicture = 'images/cody_bishop.png';
 
@@ -35,27 +33,19 @@ imageElement.setAttribute('alt', 'Profile Image of ' + fullName);
 
 /* Step 5 - Array */
 
-
 let favouriteFood = ['Cereal', 'Pasta', 'Pizza'];
-
 
 foodElement.innerHTML = favouriteFood;
 
-
 let additionalFavouriteFood = 'Chicken Quesadilla';
-
 
 favouriteFood.push(additionalFavouriteFood);
 
-
 foodElement.innerHTML += `<br>${favouriteFood}`
-
 
 favouriteFood.shift();
 
-
 foodElement.innerHTML += `<br>${favouriteFood}`
-
 
 favouriteFood.pop();
 
