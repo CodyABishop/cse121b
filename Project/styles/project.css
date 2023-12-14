@@ -1,0 +1,231 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML Selectors */
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+nav {
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+nav ul li {
+    flex: 1 1 auto;
+}
+
+nav ul li:first-child {
+    display: block;
+    font-size: 2rem;
+}
+
+nav ul li:first-child a {
+    padding: 1px 10px;
+}
+
+nav ul li {
+    display: none;
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul li a:hover {
+    background-color: #efefef;
+    color: black;
+    box-shadow: 5px 10px;
+}
+
+
+/* Site CSS */
+h1,
+h2 {
+    text-align: center;
+    margin: 1rem 0 .5rem;
+}
+
+h1 {
+    border-bottom: 1px solid #ccc;
+}
+
+#gridly h1 {
+    margin-top: 80px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: navy;
+    text-align: center;
+    margin-top: 25px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+header {
+    margin-top: 70px;
+}
+
+article {
+    margin-bottom: 1rem;
+}
+
+article div {
+    margin-bottom: .5rem;
+    text-align: right;
+}
+
+
+dt {
+    font-weight: 700;
+}
+
+dt::before {
+    content: "🏘️ ";
+}
+
+dd {
+    margin: 0 0 .5rem 2rem;
+    font-size: smaller;
+}
+
+footer {
+    background-color: #444;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Class Selectors */
+.active {
+    border-bottom: 1px solid yellow;
+}
+.open li {
+    display: block;
+}
+
+.datePub {
+    text-align: center;
+	font-size:small;
+	
+}
+
+/* ID Selectors */
+#newsSort, #newsOrder {
+    appearance: none;
+    display: flex;
+    padding: .5rem;
+    background-color: #eee;
+    color: #444;
+    font-weight: 700;
+    margin: 1rem auto;
+    width: 200px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    text-align: center;
+}
+
+#sortBy option:disabled {
+    font-style: italic;
+    padding: 1rem;
+    background-color: #111;
+    color: #eee;
+}
+
+#wsjArticles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: .5rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+#wsjArticles article {
+    height: 360px;
+    margin: .5rem;
+    border: 1px solid rgba(0, 0, 0, .5);
+    padding: 1rem;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	border-radius:5%;
+}
+#wsjArticles article:hover {
+    background-color: #FFF;
+    transform: scale(1.20);
+}
+#wsjArticles h3 {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+#wsjArticles p {
+	text-indent: 2em;
+    padding-bottom: 1rem;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 32.5em) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li:first-child {
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    section {
+        min-width: 300px;
+    }
+
+    #home {
+        margin: 100px auto 20px;
+        grid-template-columns: 250px 1fr;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+    }
+
+    #task3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        margin: 0 auto;
+        max-width: 950px;
+    }
+
+}
